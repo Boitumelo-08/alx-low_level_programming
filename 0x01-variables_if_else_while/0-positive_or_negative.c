@@ -1,13 +1,16 @@
 #include <stdlib.h>
 #include <time.h>
-/*
+#include <stdio.h>
+
+
+/**
  * main - prints if number is positive, negative or zero
  * return: one of the three
  */
+
 int main(void)
 
 {
-
 
 	int n;
 
