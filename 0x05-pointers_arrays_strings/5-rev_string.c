@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * rev-string - reverses a string
+ * rev_string - reverses a string
  * @s: string to be reversed
  * Retun: void
  */
