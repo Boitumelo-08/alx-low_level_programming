@@ -8,21 +8,23 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int x = 0, y, z;
+	int x = 0, y;
+	int matches = 0;
 
-	for (y = 0; s[y] != '\0'; y++)
+	while (s[x] != '\0')
 	{
-		if (s[y] != 32)
+		for (y = 0; accept[y] != '\0'; y++)
 		{
-			for (z = 0; accept[z] != '\0'; z++)
+			if (s[x] == accept[y])
 			{
-				if (s[y] == accept[z])
-					x++;
+				matches++;
+				break;
 			}
+			if (accept[y + 1] == '\0' && s[x] != accept[y])
+				return (matches);
 		}
-		else
-			return (x);
+		x++;
 	}
-	return (x);
-
+	return (matches);
 }
+
