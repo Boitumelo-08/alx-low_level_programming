@@ -12,7 +12,7 @@ int square_root(int a, int b)
 		return (b);
 	else if (b * b > a)
 		return (-1);
-	return (sqrt(a, b + 1));
+	return (square_root(a, b + 1));
 }
 /**
  * _sqrt_recursion - returns the natural square root of a number
