@@ -12,7 +12,7 @@ int len_checker(char *s)
 }
 /**
  * pal_checker - check if s is palindrome
- * @s: string base 
+ * @s: string base
  * @i: left index
  * @j: right index
  * Return: 1 if s is palindrome, 0 otherwise
