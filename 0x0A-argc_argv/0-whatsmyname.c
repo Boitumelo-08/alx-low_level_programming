@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * main - entry point
- * argc: counts the number of parameters
- * argv: pointer array
+ * @argc: counts the number of parameters
+ * @argv: pointer array
  * Return: Always success
  */
 
