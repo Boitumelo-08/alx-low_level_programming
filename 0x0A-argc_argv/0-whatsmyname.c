@@ -10,6 +10,6 @@
 int main(int argc, char **argv)
 {
 	if (argc > 0)
-		print("%s\n", argv[0]);
+		print("%s\n", *argv);
 	return (0);
 }
