@@ -50,13 +50,13 @@ char **strtow(char *str)
 	if (str == NULL || *str == 0)
 		return (0);
 	fr = 0;
-	wc = _wcount(str);
+	wc = word_c(str);
 	if (wc == 0)
 		return (0);
 	s = malloc((wc + 1) * sizeof(char *));
 	if (s == 0)
 		return (0);
-	ts = _trspace(str);
+	ts = trail_s(str);
 	for (i = 0; i < wc; i++)
 	{
 		l = 0;
@@ -71,7 +71,7 @@ char **strtow(char *str)
 		for (j = 0, l2 = 0; l2 < l; l2++, j++)
 			s[i][j] = *(ts + l2);
 		s[i][j] = '\0';
-		ts = _trspace(ts + l);
+		ts = trail_s(ts + l);
 	}
 	s[i] = NULL;
 	if (fr == 1)
