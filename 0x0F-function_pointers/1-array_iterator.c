@@ -6,17 +6,14 @@
  * @array: array to pass
  * @size: the size of the array
  * @action: a pointer to the function you need to use
+ * Return: void
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int c;
 
-	if (array && action != NULL)
-	{
+	if (array && action)
 		for (c = 0; c < size; c++)
-		{
-			(action) (array[c]);
-		}
-	}
+			action(array[c]);
 }
