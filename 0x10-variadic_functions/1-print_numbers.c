@@ -8,18 +8,23 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list valist;
-	unsigned int i;
+	unsigned int counter;
+	va_list myList;
 
-	va_start(valist, n);
+	va_start(myList, n);
 
-	for (i = 0; i < n; i++)
+	for (counter = 1; counter <= n; counter++)
 	{
-		printf("%d", va_arg(valist, int));
-		if (separator && i < n - 1)
+		printf("%i", va_arg(myList, int));
+		if (counter < n && separator)
+		{
 			printf("%s", separator);
+		}
+		else
+		{
+			;
+		}
 	}
-
 	printf("\n");
-	va_end(valist);
+	va_end(myList);
 }
